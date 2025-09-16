@@ -1,0 +1,86 @@
+.player {
+    padding: 50px 0 100px;
+
+    @media (max-width: 768px) {
+        padding: 20px 0 40px;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 700;
+        color: #837670;
+        margin: 0 0 40px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 0 40px;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
+
+    &__inner {
+        display: flex;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__avatar {
+        border-radius: 12px;
+        
+        @media (max-width: 768px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__nickname,
+    &__rating,
+    &__team {
+        margin: 0;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    &__message {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        color: #837670;
+        margin: 0;
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}

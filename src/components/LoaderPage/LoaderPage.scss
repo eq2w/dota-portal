@@ -1,0 +1,17 @@
+.loader {
+    padding: 50px 0 100px;
+
+    @media (max-width: 768px) {
+        padding: 20px 0 40px;
+    }
+
+    &__wrapper {
+        height: calc(100vh - 150px - 110px);
+
+        @media (max-width: 768px) {
+            height: calc(100vh - 60px - 112px);
+        }
+    }
+
+
+}

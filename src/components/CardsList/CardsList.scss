@@ -1,0 +1,176 @@
+.cards {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-items: center;
+        counter-reset: top;
+        gap: 30px;
+        margin: 0 0 40px;
+
+        @media (max-width: 1150px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+
+        &--top {
+
+            &::before {
+                counter-increment: top;
+                content: counter(top);
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #837670;
+                width: 48px;
+                border-radius: 8px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                z-index: 5;
+            }
+
+            &:first-child {
+                &::before {
+                    background-color: #ffd700;
+                }
+
+                .card__avatar {
+                    border-color: #ffd700;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    background-color: #c0c0c0;
+                }
+
+                .card__avatar {
+                    border-color: #c0c0c0;
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    background-color: #CD7F32;
+                }
+
+                .card__avatar {
+                    border-color: #CD7F32;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}
+
+.card {
+    outline: none;
+
+    &:hover,
+    &:focus-visible {
+        .card__avatar {
+            filter: none;
+        }
+
+        .card__name,
+        .card__rating,
+        .card__team {
+            color: #27ae9e;
+        }
+    }
+
+
+    &__avatar {
+        border-radius: 16px;
+        border: 2px solid #837670;
+        object-fit: contain;
+        width: 100%;
+        margin: 0 0 12px;
+        filter: grayscale(1);
+        transition: filter 0.3s ease-in;
+        display: flex;
+
+        &--team {
+            height: 220px;
+
+            @media (max-width: 1340px) {
+                height: 180px;
+            }
+
+            @media (max-width: 1150px) {
+                height: 150px;
+            }
+
+            @media (max-width: 1000px) {
+                height: 120px;
+            }
+
+            @media (max-width: 768px) {
+                height: 200px;
+            }
+
+            @media (max-width: 600px) {
+                height: 150px;
+            }
+
+            @media (max-width: 450px) {
+                height: 100px;
+            }
+        }
+
+        &--no-avatar {
+            object-fit: unset;
+        }
+
+
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        margin: 0 0 8px;
+        transition: color 0.3s ease-in;
+        color: #ffffff;
+        word-break: break-all;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__rating,
+    &__team {
+        font-size: 18px;
+        line-height: 22px;
+        text-wrap: nowrap;
+        z-index: 5;
+        margin: 0;
+        text-align: center;
+        transition: color 0.3s ease-in;
+        color: #ffffff;
+        word-break: break-all;
+        text-wrap: wrap;
+    }
+
+
+}

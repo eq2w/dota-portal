@@ -1,0 +1,23 @@
+.btn {
+    display: flex;
+    outline: none;
+    padding: 16px 25px;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #837670;
+    border-radius: 12px;
+    outline: none;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in;
+    border: none;
+
+    &:hover,
+    &:focus-visible {
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

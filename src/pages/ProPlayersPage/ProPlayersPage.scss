@@ -1,0 +1,29 @@
+.pro-players {
+    padding: 50px 0 100px;
+
+    @media (max-width: 768px) {
+        padding: 20px 0 40px;
+    }
+
+    &__wrapper {
+        box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        margin: 0 0 40px;
+        color: #837670;
+        font-weight: 500;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+            line-height: 32px;
+            margin: 0 0 20px;
+        }
+    }
+}

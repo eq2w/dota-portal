@@ -38,7 +38,7 @@ const MatchPage = () => {
                                         player.isRadiant &&
                                         <li className='match-info__players-item' key={player.player_slot}>
                                             <Link to={`/players/${player.account_id}`} className="match-info__player">
-                                                <p className='match-info__player-name'>{player.name ? player.name : '{Unknown}'}</p>
+                                                <p className='match-info__player-name'>{player.personaname ? player.personaname : '{Unknown}'}</p>
                                                 <p className='match-info__player-hero'>Герой: {heroesQuery.data?.find(hero => hero.id === player.hero_id)?.localized_name}</p>
                                                 <div className="match-info__player-stats">
                                                     <span className='match-info__player-stats-info'>K: {player.kills}</span>
@@ -60,7 +60,7 @@ const MatchPage = () => {
                                         !player.isRadiant &&
                                         <li className='match-info__players-item' key={player.player_slot}>
                                             <Link to={`/players/${player.account_id}`} className="match-info__player">
-                                                <p className='match-info__player-name'>{player.name ? player.name : '{Unknown}'}</p>
+                                                <p className='match-info__player-name'>{player.personaname ? player.personaname : '{Unknown}'}</p>
                                                 <p className='match-info__player-hero'>Герой: {heroesQuery.data?.find(hero => hero.id === player.hero_id)?.localized_name}</p>
                                                 <div className="match-info__player-stats">
                                                     <span className='match-info__player-stats-info'>K: {player.kills}</span>
